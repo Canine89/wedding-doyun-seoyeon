@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="{{SITE_URL}}/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:site_name" content="우리의 결혼식">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:url" content="{{SITE_URL}}/">
+  <meta property="og:image" content="{{SITE_URL}}/images/share-thumbnail.png">
+  <meta property="og:image:secure_url" content="{{SITE_URL}}/images/share-thumbnail.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1122">
+  <meta property="og:image:height" content="1122">
+  <meta property="og:image:alt" content="유채꽃밭에서 함께한 {{GROOM}}과 {{BRIDE}}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="{{SITE_URL}}/images/share-thumbnail.png">
+  <link rel="icon" href="images/share-thumbnail.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/share-thumbnail.png">
+  <link rel="stylesheet" href="style.css">
+  <script id="wedding-data" type="application/json">{{DATA}}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#invitation">초대 글로 바로 가기</a>
+  <main class="invitation">
+    <header class="cover">
+      <figure class="cover-photo"><img src="{{MAIN_PHOTO}}" alt="{{MAIN_ALT}}" width="1122" height="1402" fetchpriority="high"></figure>
+      <div class="cover-title">
+        <p class="eyebrow">WE ARE GETTING MARRIED</p>
+        <h1><span>{{GROOM}}</span><span class="name-join" aria-label="그리고">&amp;</span><span>{{BRIDE}}</span></h1>
+        <p class="cover-caption">서로의 계절이 되어, 함께</p>
+      </div>
+    </header>
+
+    <section class="letter section" id="invitation" aria-labelledby="letter-title">
+      <p class="little-rule" aria-hidden="true"></p>
+      <h2 id="letter-title">소중한 당신을 초대합니다</h2>
+      <p class="greeting">{{GREETING}}</p>
+      <p class="signature"><span>{{GROOM}}</span> · <span>{{BRIDE}}</span> 올림</p>
+    </section>
+
+    <section class="date section" aria-labelledby="date-title">
+      <p class="eyebrow">OUR WEDDING DAY</p>
+      <h2 id="date-title">함께하는 첫날</h2>
+      <p class="date-display" id="date-display">{{DATE_SHORT}}</p>
+      <p class="date-detail"><time datetime="{{DATE_ISO}}">{{DATE_LONG}}</time></p>
+      <div class="calendar" id="calendar" aria-label="결혼식 날짜 달력"></div>
+      <p class="day-note" id="day-note">그날, 반가운 얼굴로 만나요.</p>
+    </section>
+
+    <section class="location section" aria-labelledby="location-title">
+      <h2 id="location-title">오시는 길</h2>
+      <p class="venue">{{VENUE}}</p>
+      <p class="hall">{{HALL}}</p>
+      <address>{{ADDRESS}}</address>
+      <div class="map-links"><a id="naver-map" href="{{MAP_NAVER}}" target="_blank" rel="noopener noreferrer">네이버 지도 <span aria-hidden="true">↗</span></a><a id="kakao-map" href="{{MAP_KAKAO}}" target="_blank" rel="noopener noreferrer">카카오맵 <span aria-hidden="true">↗</span></a></div>
+      <div class="directions" id="directions"></div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-heading"><p class="eyebrow">MOMENTS TO REMEMBER</p><h2 id="gallery-title">함께 쌓아온 계절</h2><p>평범한 날들이 모여, 우리의 이야기가 되었습니다.</p></div>
+      <div class="gallery" id="gallery"></div>
+      <p class="gallery-hint">사진을 누르면 크게 볼 수 있어요.</p>
+    </section>
+
+    <section class="accounts section" aria-labelledby="accounts-title">
+      <h2 id="accounts-title">마음 전하실 곳</h2>
+      <p class="section-intro">멀리서 보내주시는 따뜻한 마음도<br>소중히 간직하겠습니다.</p>
+      <div id="accounts"></div>
+    </section>
+
+    <section class="rsvp section" aria-labelledby="rsvp-title">
+      <h2 id="rsvp-title">함께해 주실 수 있나요?</h2>
+      <p class="section-intro">편안히 모실 수 있도록 참석 소식을 전해주세요.<br>회신 내용은 두 사람만 확인합니다.</p>
+      <form id="rsvp-form">
+        <label for="rsvp-name">성함</label><input id="rsvp-name" name="name" autocomplete="name" maxlength="30" required placeholder="성함을 적어주세요">
+        <label for="rsvp-count">참석 인원 <span class="muted">(본인 포함)</span></label><select id="rsvp-count" name="count" required><option value="1">1명</option><option value="2">2명</option><option value="3">3명</option><option value="4">4명</option><option value="5">5명</option><option value="6">6명</option><option value="7">7명</option><option value="8">8명</option><option value="9">9명</option><option value="10">10명</option></select>
+        <fieldset><legend>식사 여부</legend><label class="radio-label"><input type="radio" name="meal" value="yes" required> 식사할게요</label><label class="radio-label"><input type="radio" name="meal" value="no"> 식사하지 않아요</label></fieldset>
+        <p class="form-notice">입력하신 성함과 참석 정보는 예식 준비를 위해 저장됩니다.</p>
+        <button class="primary" type="submit">참석 소식 전하기</button><p class="form-status" id="rsvp-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="guestbook section" aria-labelledby="guestbook-title">
+      <h2 id="guestbook-title">따뜻한 한마디</h2>
+      <p class="section-intro">두 사람의 시작에 축복을 남겨주세요.</p>
+      <form id="guestbook-form"><label for="guest-name">성함</label><input id="guest-name" name="name" autocomplete="name" maxlength="30" required placeholder="성함을 적어주세요"><label for="guest-message">축하 메시지</label><input id="guest-message" name="message" maxlength="100" required placeholder="마음을 담은 한 줄 (100자 이내)"><p class="form-notice">성함과 메시지는 이 페이지에 공개됩니다.</p><button type="submit" class="primary">축하 마음 남기기</button><p class="form-status" id="guestbook-status" role="status" aria-live="polite"></p></form>
+      <div id="guestbook-list" class="guestbook-list" aria-live="polite"><p class="empty-state">축하 메시지를 불러오고 있어요.</p></div>
+      <button type="button" class="text-button" id="refresh-guestbook">새 메시지 확인</button>
+    </section>
+    <footer><p class="little-rule" aria-hidden="true"></p><p>우리의 시작을 함께해 주셔서<br>진심으로 감사합니다.</p><p class="footer-names">{{GROOM}} <span aria-hidden="true">&amp;</span> {{BRIDE}}</p></footer>
+  </main>
+  <dialog id="photo-dialog" aria-label="사진 크게 보기"><div class="lightbox-toolbar"><p id="photo-counter" aria-live="polite"></p><button type="button" id="close-photo" aria-label="사진 닫기">닫기 ×</button></div><img id="large-photo" alt="" width="1122" height="1402"><div class="lightbox-nav"><button id="prev-photo" type="button" aria-label="이전 사진">← 이전</button><button id="next-photo" type="button" aria-label="다음 사진">다음 →</button></div></dialog>
+  <p id="toast" class="toast" role="status" aria-live="polite"></p>
+</body>
+</html>
