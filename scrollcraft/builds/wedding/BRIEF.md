@@ -15,3 +15,14 @@
 - 중간 공백은 문단과 섹션을 구분하기 위한 여백이며 빈 스크롤 구역 없음.
 - 디자인 다이얼: DESIGN_VARIANCE 5 / MOTION_INTENSITY 3 / VISUAL_DENSITY 3.
 - fingerprint: 신규 프로젝트여서 기존 비교 행 없음.
+
+## 두 번째 연출: 손끝에 쌓이는 사진 앨범
+사용자의 “scrollcraft를 적극적으로, 독특한 연출” 요청에 따라 강화.
+- 감정 곡선: 사진의 거리 변화로 몰입 → 이름이 모이며 결합 → 편지로 친밀함 → 날짜로 기대 → 교통 정보로 안심 → 포개지는 인화사진으로 기쁨(peak) → 회신과 축하로 참여.
+- signature / tell-someone: “아래로 읽는데 우리 사진이 한 장씩 손에 쌓이는 초대장이야.”
+- grammar: photographic letter + print stack. 정보 순서는 고정. 단일 카메라 여행, 분할 비교, 포스터, 제품 카탈로그, 빠른 cutlist는 차분한 초대장과 부합하지 않아 제외.
+- score: cover=parallax / names=kinetic / letter=reveal / date=line / location=static / gallery=sticky prints / accounts and forms=static.
+- 사진은 가장 큰 시각 변화와 가장 긴 구간을 차지. 각 사진에 개별 기울기와 위치를 주어 종이 더미처럼 포개짐. 사진 클릭 시 원본 비율의 확대 보기 유지.
+- 스크롤을 가로채지 않음. CSS sticky + native scroll timelines. 미지원 브라우저는 제목/메인 사진을 정적으로 유지하고 sticky 앨범은 동작.
+- reduced motion에서는 사진 겹침·고정·움직임을 모두 해제하고 평범한 세로 앨범으로 전환.
+- 비교: 이전 버전 대비 hero, act sequence, signature 변경. 동일 청첩장의 요청된 refinement이므로 별도 신규 사이트의 4/6 차별화 조건은 적용하지 않음.

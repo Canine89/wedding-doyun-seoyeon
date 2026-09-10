@@ -1,5 +1,9 @@
 # 도윤과 서연의 모바일 청첩장
 
+배포: https://wedding-doyun-seoyeon.vercel.app
+
+관리: https://supabase.com/dashboard/project/lsniqnycfhlcslhxeyhb/editor (`rsvps` 표)
+
 외부 라이브러리 없이 HTML, CSS, JavaScript로 만든 모바일 청첩장입니다. 사진·갤러리 확대·계좌 복사·참석 회신·방명록을 지원합니다. 현재 정보는 모두 가상 예시입니다.
 
 ## 정보 수정
@@ -49,7 +53,7 @@ http://localhost:4500 에서 화면을 확인합니다. `index.html`은 빌드 �
 - [tasteskill](skills/tasteskill/SKILL.md): https://github.com/leonxlnx/taste-skill 의 `skills/taste-skill`
 - [scrollcraft](skills/scrollcraft/SKILL.md): https://github.com/nateherkai/scroll-craft 의 `plugins/nateherk-design/skills/scroll-craft`
 
-명조, 한 가지 포인트 색, 섹션별 여백 리듬, 사진 중심 앨범, 날짜 밑줄의 등장 효과와 reduced-motion 처리를 적용했습니다. 사용자 요청에 따라 스킬에서 제안하는 외부 애니메이션 엔진은 사용하지 않았습니다. 디자인 기록은 `scrollcraft/builds/wedding/BRIEF.md`에 있습니다.
+명조, 한 가지 포인트 색, 섹션별 여백 리듬에 더해 메인 사진의 스크롤 거리 변화, 가운데로 모이는 이름, 편지 등장, 날짜 밑줄, 한 장씩 포개지는 인화사진 앨범을 적용했습니다. 모션 줄이기 설정에서는 움직임과 고정을 해제합니다. 사용자 요청에 따라 스킬에서 제안하는 외부 애니메이션 엔진은 사용하지 않았습니다. 디자인 기록은 `scrollcraft/builds/wedding/BRIEF.md`에 있습니다.
 
 ## 확인
 
