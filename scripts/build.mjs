@@ -16,5 +16,10 @@ html=html.replace(/\{\{(\w+)\}\}/g,(_,key)=>key==='DATA'?JSON.stringify(data).re
 await mkdir('dist',{recursive:true});
 await writeFile('dist/index.html',html);
 for(const file of ['style.css','app.js'])await cp(file,`dist/${file}`);
-await cp('images','dist/images',{recursive:true});
+await mkdir('dist/images',{recursive:true});
+for (const photo of data.photos) {
+  if (!/^images\/[a-zA-Z0-9_./-]+$/.test(photo.src) || photo.src.includes('..')) throw new Error('웹용 사진 경로는 images 폴더 안의 영문 경로를 사용하세요.');
+  await cp(photo.src, `dist/${photo.src}`);
+}
+await cp('images/share-thumbnail.png','dist/images/share-thumbnail.png');
 console.log(`Built invitation for ${title}; canonical ${url.origin}`);

@@ -35,23 +35,23 @@ JSON 코드 블록 안의 값을 수정하세요. 키 이름과 따옴표, 쉼�
   ],
   "photos": [
     {
-      "src": "images/ChatGPT Image 2026년 9월 7일 오전 10_19_30 (1).png",
+      "src": "images/photo-01.jpg",
       "alt": "유채꽃밭에서 손을 잡은 두 사람"
     },
     {
-      "src": "images/ChatGPT Image 2026년 9월 7일 오전 10_19_31 (2).png",
+      "src": "images/photo-02.jpg",
       "alt": "제주 바다를 배경으로 나란히 앉은 두 사람"
     },
     {
-      "src": "images/ChatGPT Image 2026년 9월 7일 오전 10_19_31 (3).png",
+      "src": "images/photo-03.jpg",
       "alt": "풀밭에서 등을 맞댄 두 사람"
     },
     {
-      "src": "images/ChatGPT Image 2026년 9월 7일 오전 10_19_32 (4).png",
+      "src": "images/photo-04.jpg",
       "alt": "귤나무 아래에서 웃는 두 사람"
     },
     {
-      "src": "images/ChatGPT Image 2026년 9월 7일 오전 10_19_32 (5).png",
+      "src": "images/photo-05.jpg",
       "alt": "햇살이 드는 숲에서 마주 선 두 사람"
     }
   ]
